@@ -483,6 +483,38 @@ h1.hero-title em { font-style: italic; color: var(--accent); }
 .team-name { font-size: 0.9rem; font-weight: 700; color: var(--dark); margin-bottom: 0.2rem; }
 .team-role { font-size: 0.75rem; color: var(--mid-grey); }
 
+/* ---------- Experience ---------- */
+.experience { background: var(--white); }
+.experience-intro { max-width: 650px; margin-bottom: 4rem; }
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.experience-card {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    transition: all var(--transition);
+}
+.experience-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+.experience-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+.experience-content p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 /* ---------- Gallery Placeholder ---------- */
 .gallery { background: var(--off-white); padding-bottom: 0; }
 .gallery-grid {
@@ -609,6 +641,7 @@ footer {
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
     .competences-grid { grid-template-columns: repeat(2, 1fr); }
     .practical-grid { grid-template-columns: 1fr 1fr; }
+    .experience-grid { grid-template-columns: 1fr; }
     .team-grid { grid-template-columns: repeat(3, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     .conduct-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -627,6 +660,7 @@ footer {
     .mobile-menu-btn { display: block; }
     .competences-grid { grid-template-columns: 1fr; }
     .practical-grid { grid-template-columns: 1fr; }
+    .experience-grid { grid-template-columns: 1fr; }
     .team-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
     .hero-meta { flex-wrap: wrap; gap: 1.25rem; }
