@@ -92,4 +92,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
+    // 5. Lightbox functionality for gallery images
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    // Open lightbox when a gallery image is clicked
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = img.alt;
+            lightbox.classList.add('show');
+        });
+    });
+
+    // Close lightbox on close button click
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('show');
+    });
+
+    // Close when clicking outside the image (on overlay)
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('show');
+        }
+    });
+
+    // End of DOMContentLoaded
+    });
